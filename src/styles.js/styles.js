@@ -28,6 +28,12 @@ input {
   &::placeholder {
     color: #dbdbdb;
   }
+  &:disabled{
+    background-color:#F2F2F2;
+    &::placeholder{
+      color:#AFAFAF;
+    }
+  }
 }
 textarea:focus,
 input:focus,
@@ -44,6 +50,12 @@ button {
   border: thin solid #52b6ff;
   font-size:21px;
   border-radius: 5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  &:disabled{
+    opacity:0.7;
+  }
 }
 `;
 
