@@ -3,9 +3,9 @@ import { HeaderUser,BtnP,MessageNone,BodyHabit,FooterUser } from "./styles";
 export default function HabitsPage(){
     return(
         <>
-        <HeaderUser>
+        <HeaderUser data-test="header">
             <p>TrackIt</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAFNbMMcoO9LUzTNd4ScxQmnMEhhcrl55Ww&usqp=CAU"/>
+            <img alt="Imagem Perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAFNbMMcoO9LUzTNd4ScxQmnMEhhcrl55Ww&usqp=CAU"/>
         </HeaderUser>
         <BodyHabit>
         <BtnP>

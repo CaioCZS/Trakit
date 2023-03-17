@@ -1,7 +1,5 @@
-import FormStart from "../../components/FormStart";
-import LogoHeader from "../../components/LogoHeader";
+import {LogoHeader,FormStart,StyleP} from "../../styles.js/styles.js"
 import logo from "../../assets/logo.png"
-import StyleP from "../../components/StyleP";
 import { Link,useNavigate } from "react-router-dom";
 export default function LoginPage() {
     const navigate = useNavigate()
@@ -13,14 +11,14 @@ export default function LoginPage() {
     return (
     <>
     <LogoHeader>
-        <img src={logo} />
+        <img src={logo} alt="logo TrakIt"/>
     </LogoHeader>
     <FormStart onSubmit={login}>
-      <input placeholder="email"/>
-      <input placeholder="senha"/>
-      <button type="submit">Entrar</button>
+      <input data-test="email-input" placeholder="email"/>
+      <input data-test="password-input"  placeholder="senha"/>
+      <button data-test="login-btn" type="submit">Entrar</button>
     </FormStart>
-    <Link to="/cadastro"><StyleP>Não tem uma conta? Cadastre-se!</StyleP></Link>
+    <Link data-test="signup-link"  to="/cadastro"><StyleP>Não tem uma conta? Cadastre-se!</StyleP></Link>
     </>
   );
 }

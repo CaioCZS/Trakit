@@ -1,22 +1,24 @@
-import FormStart from "../../components/FormStart";
-import LogoHeader from "../../components/LogoHeader";
+import { LogoHeader, FormStart, StyleP } from "../../styles.js/styles.js";
 import logo from "../../assets/logo.png";
-import StyleP from "../../components/StyleP";
 import { Link } from "react-router-dom";
 export default function SignUpPage() {
   return (
     <>
       <LogoHeader>
-        <img src={logo} />
+        <img src={logo} alt="logo TrakIt" />
       </LogoHeader>
       <FormStart>
-        <input placeholder="email" />
-        <input placeholder="senha" />
-        <input placeholder="nome" />
-        <input placeholder="foto" />
-        <button type="submit">Cadastrar</button>
+        <input data-test="email-input" placeholder="email" />
+        <input data-test="password-input" placeholder="senha" />
+        <input data-test="user-name-input" placeholder="nome" />
+        <input data-test="user-image-input" placeholder="foto" />
+        <button data-test="signup-btn" type="submit">
+          Cadastrar
+        </button>
       </FormStart>
-      <Link to="/"><StyleP>Já tem uma conta? Faça login!</StyleP></Link>
+      <Link data-test="login-link"  to="/">
+        <StyleP>Já tem uma conta? Faça login!</StyleP>
+      </Link>
     </>
   );
 }
