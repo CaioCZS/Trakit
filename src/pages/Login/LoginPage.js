@@ -1,4 +1,4 @@
-import {LogoHeader,FormStart,StyleP} from "../../styles.js/styles.js"
+import {LogoHeader,FormStart,StyleP} from "../../styles/styles.js"
 import logo from "../../assets/logo.png"
 import { Link,useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
@@ -6,7 +6,7 @@ export default function LoginPage() {
     const navigate = useNavigate()
   
     function login(){
-    navigate("/habitos")
+    navigate("/hoje")
   }
   
     return (

@@ -45,7 +45,6 @@ table {
 	border-spacing: 0;
 }
 body{
-	background-color:grey;
 	font-family:"Lexend Deca";
 }
 *{

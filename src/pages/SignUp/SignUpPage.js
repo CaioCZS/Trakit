@@ -1,4 +1,4 @@
-import { LogoHeader, FormStart, StyleP } from "../../styles.js/styles.js";
+import { LogoHeader, FormStart, StyleP } from "../../styles/styles.js";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const ScreenSize = styled.div`
-width:375px;
+min-width:375px;
+max-width:100vw;
 height:100vh;
 margin:0 auto;
 background-color:#FFFFFF;

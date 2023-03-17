@@ -4,12 +4,13 @@ import {
   MessageNone,
   BodyHabit,
   FooterUser,
+  StatusToday,
   ProgressBarContainer,
 } from "../../styles/styles.js";
 import { useNavigate } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-export default function HabitsPage() {
+export default function TodayPage() {
   const navigate = useNavigate();
   return (
     <>
@@ -22,9 +23,11 @@ export default function HabitsPage() {
       </HeaderUser>
       <BodyHabit>
         <BtnP>
-          <p>Meus hábitos</p>
-          <button data-test="habit-create-btn">+</button>
+          <p data-test="today">Segunda, 17/05</p>
         </BtnP>
+        <StatusToday data-test="today-counter">
+          Nenhum hábito concluído ainda
+        </StatusToday>
         <MessageNone>
           Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para
           começar a trackear!

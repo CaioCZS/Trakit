@@ -9,7 +9,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-export default function HabitsPage() {
+export default function HistoricPage() {
   const navigate = useNavigate();
   return (
     <>
@@ -22,12 +22,10 @@ export default function HabitsPage() {
       </HeaderUser>
       <BodyHabit>
         <BtnP>
-          <p>Meus hábitos</p>
-          <button data-test="habit-create-btn">+</button>
+          <p>Histórico</p>
         </BtnP>
         <MessageNone>
-          Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para
-          começar a trackear!
+          Em breve você poderá ver o histórico dos seus hábitos aqui!
         </MessageNone>
       </BodyHabit>
       <FooterUser data-test="menu">

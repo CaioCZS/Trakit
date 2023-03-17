@@ -2,8 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "../pages/Login/LoginPage";
 import SignUpPage from "../pages/SignUp/SignUpPage";
 import HabitsPage from "../pages/Habits/HabitsPage";
-import ScreenSize from "./ScreenSize";
-
+import ScreenSize from "../styles/ScreenSize.js";
+import TodayPage from "../pages/Today/TodayPage";
+import HistoricPage from "../pages/Historic/HistoricPage";
 function App() {
   return (
     <ScreenSize>
@@ -12,6 +13,8 @@ function App() {
           <Route path="/" element={<LoginPage />} />
           <Route path="/cadastro" element={<SignUpPage />} />
           <Route path="/habitos" element={<HabitsPage />} />
+          <Route path="/hoje" element={<TodayPage />} />
+          <Route path="/historico" element={<HistoricPage />} />
         </Routes>
       </BrowserRouter>
     </ScreenSize>
