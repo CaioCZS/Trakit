@@ -59,31 +59,6 @@ button {
 }
 `;
 
-
-export const HeaderUser = styled.div`
-  background-color: #126ba5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  p {
-    font-family: Playball;
-    color: #ffffff;
-    font-size: 39px;
-  }
-  img {
-    width: 51px;
-    height: 51px;
-    border-radius: 98px;
-  }
-`;
-
 export const BtnP = styled.div`
   margin-top: 50px;
   width: 100%;
@@ -122,23 +97,6 @@ export const BodyHabit = styled.div`
   overflow-y: auto;
 `;
 
-export const FooterUser = styled.div`
-  background-color: #ffffff;
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.15);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  p {
-    color: #52b6ff;
-    font-size:18px;
-    margin:36px 22px;
-  }
-`;
 
 export const StyleP = styled.p`
     margin: 0 auto;
@@ -160,8 +118,3 @@ margin-top: -30px;
 margin-bottom: 20px;
 `
 
-export const ProgressBarContainer = styled.div`
-width:91px;
-height:91px;
-margin-bottom: 42px;
-`
