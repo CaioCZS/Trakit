@@ -2,7 +2,8 @@ import { LogoHeader, FormStart, StyleP } from "../../styles/styles.js";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import Context from "../../components/Context.js";
 import axios from "axios";
 export default function LoginPage() {
   const [loginData, setLoginData] = useState({
@@ -10,6 +11,7 @@ export default function LoginPage() {
     password: "",
   });
   const [isDisabled, setIsDisabled] = useState(false);
+  const [userData, setUserData] = useContext(Context)
   const textBtn = isDisabled
     ? [<ThreeDots key="loadingSignUp" color="#FFFFFF" width="51px" />]
     : "Entrar";
@@ -26,7 +28,8 @@ export default function LoginPage() {
     axios
       .post(URL, loginData)
       .then((res) => {
-        console.log(res.data);
+        const {image , token , name} = res.data
+        setUserData({image , token , name})
         navigate("/hoje");
       })
       .catch((err) => {

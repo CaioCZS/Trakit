@@ -55,6 +55,7 @@ const FooterUser = styled.div`
   justify-content:space-between;
   align-items:center;
   padding:0 22px;
+  z-index:1;
   a{
     color: #52b6ff;
     font-size:18px;

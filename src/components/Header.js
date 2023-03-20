@@ -1,12 +1,15 @@
 import styled from "styled-components";
-
+import Context from "./Context";
+import { useContext } from "react";
 export default function Header(){
+  const [userData, setUserData] = useContext(Context)
+  const {image} = userData
     return(
         <HeaderUser data-test="header">
         <p>TrackIt</p>
         <img
           alt="Imagem Perfil"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAFNbMMcoO9LUzTNd4ScxQmnMEhhcrl55Ww&usqp=CAU"
+          src={image}
         />
       </HeaderUser>
     )
@@ -24,6 +27,7 @@ const HeaderUser = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  z-index:1;
   p {
     font-family: Playball;
     color: #ffffff;

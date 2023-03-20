@@ -5,7 +5,7 @@ min-width:375px;
 max-width:100vw;
 height:100vh;
 margin:0 auto;
-background-color:#FFFFFF;
+background-color: #e5e5e5;
 padding-top:30px;
 position:relative;
 `
