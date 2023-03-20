@@ -19,7 +19,6 @@ function App() {
             <Routes>
               <Route path="/" element={<LoginPage />} />
               <Route path="/cadastro" element={<SignUpPage />} />
-
               <Route path="/habitos" element={<HabitsPage />} />
               <Route path="/hoje" element={<TodayPage />} />
               <Route path="/historico" element={<HistoricPage />} />

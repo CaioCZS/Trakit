@@ -74,7 +74,7 @@ export default function TodayPage() {
           </p>
         </BtnP>
         <StatusToday data-test="today-counter">
-          Nenhum hábito concluído ainda
+          {percValue > 0 ? <span>{percValue}% dos hábitos concluídos</span> : "Nenhum hábito concluído ainda"}
         </StatusToday>
         {todayList === undefined ? (
           <h1>Verificando se você tem hábitos à cumprir hoje...</h1>

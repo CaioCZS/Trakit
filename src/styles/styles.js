@@ -121,5 +121,8 @@ color:#BABABA;
 margin-left: 18px;
 margin-top: -30px;
 margin-bottom: 20px;
+span{
+  color:#8FC549;
+}
 `
 

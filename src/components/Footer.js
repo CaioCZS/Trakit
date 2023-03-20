@@ -51,7 +51,7 @@ const FooterUser = styled.div`
   background-color: #ffffff;
   height: 70px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.15);

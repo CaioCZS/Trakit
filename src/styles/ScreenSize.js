@@ -7,6 +7,5 @@ height:100vh;
 margin:0 auto;
 background-color: #e5e5e5;
 padding-top:30px;
-position:relative;
 `
 export default ScreenSize
