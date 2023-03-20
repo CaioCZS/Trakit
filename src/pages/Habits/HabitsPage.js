@@ -25,7 +25,7 @@ export default function HabitsPage() {
   const daysConstant = ["D", "S", "T", "Q", "Q", "S", "S"];
   const textBtn = isDisabled
     ? [<ThreeDots key="loadingSignUp" color="#FFFFFF" width="51px" />]
-    : "Entrar";
+    : "Salvar";
   useEffect(() => {
     const URL =
       "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits";
@@ -69,7 +69,7 @@ export default function HabitsPage() {
         setIsDisabled(false);
       })
       .catch((err) => {
-
+        alert("Seu hábito precisa de um nome :)")
         setIsDisabled(false);
       });
     setIsDisabled(true);
@@ -114,10 +114,12 @@ export default function HabitsPage() {
               <button
                 data-test="habit-create-cancel-btn"
                 onClick={() => setCreate(false)}
+                disabled={isDisabled}
               >
                 Cancelar
               </button>
               <FixDots
+                disabled={isDisabled}
                 data-test="habit-create-save-btn"
                 onClick={confirmCreate}
               >
