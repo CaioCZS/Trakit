@@ -27,13 +27,13 @@ export default function HabitsPage() {
     ? [<ThreeDots key="loadingSignUp" color="#FFFFFF" width="51px" />]
     : "Salvar";
   useEffect(() => {
-    const URL =
-      "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits";
     const config = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     };
+    const URL =
+    "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits";
     axios
       .get(URL, config)
       .then((res) => setList(res.data))

@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const Context = createContext({name:"",image:"",token:""},() => {})
+const Context = createContext({image:"",token:""},() => {})
 
 export default Context

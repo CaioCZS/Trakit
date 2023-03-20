@@ -9,7 +9,7 @@ import Context from "./Context";
 import Percentual from "./Percentual";
 import { useState } from "react";
 function App() {
-  const [userData, setUserData] = useState({ name: "", image: "", token: "" });
+  const [userData, setUserData] = useState({image: "", token: "" });
   const [percValue, setPercValue] = useState(0);
   return (
     <Context.Provider value={[userData, setUserData]}>

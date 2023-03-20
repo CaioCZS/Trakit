@@ -23,6 +23,7 @@ export default function TodayPage() {
   };
 
   useEffect(() => {
+    
     const URL =
       "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits/today";
     axios

@@ -2,7 +2,7 @@ import { LogoHeader, FormStart, StyleP } from "../../styles/styles.js";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
-import { useState,useContext } from "react";
+import { useState,useContext, useEffect } from "react";
 import Context from "../../components/Context.js";
 import axios from "axios";
 export default function LoginPage() {
@@ -11,7 +11,15 @@ export default function LoginPage() {
     password: "",
   });
   const [isDisabled, setIsDisabled] = useState(false);
-  const [userData, setUserData] = useContext(Context)
+  const [userData, setUserData] = useContext(Context);
+  useEffect(() => {
+    const localDataGet = JSON.parse(localStorage.getItem("localData"));
+    if(localDataGet){
+      setUserData(localDataGet)
+      navigate("/hoje")
+    }
+
+  },[])
   const textBtn = isDisabled
     ? [<ThreeDots key="loadingSignUp" color="#FFFFFF" width="51px" />]
     : "Entrar";
@@ -28,8 +36,11 @@ export default function LoginPage() {
     axios
       .post(URL, loginData)
       .then((res) => {
-        const {image , token , name} = res.data
-        setUserData({image , token , name})
+        const {image , token} = res.data
+        setUserData({image , token })
+        const obj = {image , token}
+        const objStr = JSON.stringify(obj)
+        localStorage.setItem("localData" , objStr)
         navigate("/hoje");
       })
       .catch((err) => {

@@ -1,15 +1,22 @@
 import styled from "styled-components";
 import Context from "./Context";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 export default function Header(){
   const [userData, setUserData] = useContext(Context)
   const {image} = userData
+  const [newImage, setNewImage] = useState(image)
+  const localDataGet = JSON.parse(localStorage.getItem("localData"));
+  useEffect(()=>{
+    if(localDataGet){
+      setNewImage(localDataGet.image)
+    }
+  },[])
     return(
         <HeaderUser data-test="header">
         <p>TrackIt</p>
         <img
           alt="Imagem Perfil"
-          src={image}
+          src={newImage}
         />
       </HeaderUser>
     )
