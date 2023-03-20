@@ -57,8 +57,17 @@ export default function HabitsPage() {
         Authorization: `Bearer ${token}`,
       },
     };
-    const body = { name: nomeHabito, days: selectDays };
+    const nvLista = []
+    for(let i=0; i< selectDays.length; i++){
+      if(selectDays[i] === 1){
+        nvLista.push(7)
+      }else{
+        nvLista.push(selectDays-1)
+      }
+    }
 
+    const body = { name: nomeHabito, days: nvLista };
+    console.log(body)
     axios
       .post(URL, body, config)
       .then((res) => {
