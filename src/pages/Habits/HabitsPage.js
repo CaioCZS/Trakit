@@ -18,7 +18,7 @@ export default function HabitsPage() {
   const [deleted, setDeletec] = useState(0);
   const token = userData.token;
   const [isDisabled, setIsDisabled] = useState(false);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(undefined);
   const [create, setCreate] = useState("");
   const [selectDays, setSetectDays] = useState([]);
   const [nomeHabito, setNomeHabito] = useState("");
@@ -129,11 +129,15 @@ export default function HabitsPage() {
           </CreateContainer>
         )}
         <ListHabits list={list} setDeletec={setDeletec} deleted={deleted} />
-        {list.length === 0 && (
+        {list === undefined ? (
+          ""
+        ) : list.length === 0 ? (
           <MessageNone>
             Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para
             começar a trackear!
           </MessageNone>
+        ) : (
+          ""
         )}
       </BodyHabit>
       <Footer />

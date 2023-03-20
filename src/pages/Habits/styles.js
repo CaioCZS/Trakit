@@ -5,8 +5,11 @@ export const ConteinerHabits = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
+  h1{
+    margin-bottom: 15px;
+    margin-right: 5px;
+  }
 `;
 
 export const LiHabit = styled.li`
@@ -16,6 +19,7 @@ export const LiHabit = styled.li`
   border-radius: 5px;
   padding: 15px;
   position: relative;
+  margin:0 auto;
   p {
     color: #666666;
     font-size: 20px;
@@ -27,7 +31,7 @@ export const DivIcon = styled.div`
     position: absolute;
     top: 11px;
     right: 10px;
-    in-icon{
+    ion-icon{
       color: #666666;
     }
 `

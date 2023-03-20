@@ -96,6 +96,10 @@ export const BodyHabit = styled.div`
   height: 88%;
   overflow-y: auto;
   padding-bottom:15px;
+  h1{
+    margin-left: 20px;
+    color:#666666;
+  }
 `;
 
 

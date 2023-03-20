@@ -22,7 +22,11 @@ export default function ListHabits({ list ,setDeletec,deleted}) {
   }
   return (
     <ConteinerHabits>
-      {list.map((h) => (
+      {list === undefined ? (
+          <h1>Carregando seus hábitos...</h1>
+        ) : list.length === 0 ? (
+          ""
+        ) :  list.map((h) => (
         <LiHabit data-test="habit-container" key={h.id}>
           <p data-test="habit-name" >{h.name}</p>
           <DaysBtn>
