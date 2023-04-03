@@ -45,9 +45,9 @@ export const DayBtn = styled.button`
   height: 30px;
   border-radius: 5px;
   font-size: 20px;
-  border: thin solid ${({ select }) => (select ? "#CFCFCF" : "#D4D4D4")};
-  background-color: ${({ select }) => (select ? "#CFCFCF" : "#FFFFFF")};
-  color: ${({ select }) => (select ? "#FFFFFF" : "#DBDBDB")};
+  border: thin solid ${({ select }) => (select === true ? "#CFCFCF" : "#D4D4D4")};
+  background-color: ${({ select }) => (select === true ? "#CFCFCF" : "#FFFFFF")};
+  color: ${({ select }) => (select === true ? "#FFFFFF" : "#DBDBDB")};
 `;
 export const CreateContainer = styled.div`
   width: 92%;

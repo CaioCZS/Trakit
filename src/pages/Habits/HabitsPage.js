@@ -5,6 +5,7 @@ import { BtnP, MessageNone, BodyHabit } from "../../styles/styles.js";
 import Footer from "../../components/Footer.js";
 import Header from "../../components/Header.js";
 import ListHabits from "./ListHabits.js";
+import days from "../../constants/days.js";
 import {
   CreateContainer,
   DaysBtn,
@@ -57,16 +58,7 @@ export default function HabitsPage() {
         Authorization: `Bearer ${token}`,
       },
     };
-    const nvLista = []
-    for(let i=0; i< selectDays.length; i++){
-      if(selectDays[i] === 1){
-        nvLista.push(7)
-      }else{
-        nvLista.push(selectDays-1)
-      }
-    }
-
-    const body = { name: nomeHabito, days: nvLista };
+    const body = { name: nomeHabito, days: selectDays };
     console.log(body)
     axios
       .post(URL, body, config)
@@ -107,15 +99,15 @@ export default function HabitsPage() {
               disabled={isDisabled}
             />
             <DaysBtn>
-              {daysConstant.map((d, i) => (
+              {days.map((d) => (
                 <CreateDayBtn
-                  select={selectDays.includes(i + 1) ? true : false}
+                  select={selectDays.includes(d.num) ? true : false}
                   disabled={isDisabled}
-                  key={i}
-                  onClick={() => addDay(i + 1)}
+                  key={d.num}
+                  onClick={() => addDay(d.num)}
                   data-test="habit-day"
                 >
-                  {d}
+                  {d.day}
                 </CreateDayBtn>
               ))}
             </DaysBtn>
